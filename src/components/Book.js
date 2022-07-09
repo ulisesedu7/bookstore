@@ -1,5 +1,4 @@
-const Book = (props) => {
-  const book = props;
+const Book = (book) => {
   const { title, author } = book;
 
   return (
