@@ -8,6 +8,7 @@ class AddNewBook extends React.PureComponent {
         <form>
           <input type="text" placeholder="Book Title" />
           <input type="text" placeholder="Author" />
+          <button type="submit">ADD BOOK</button>
         </form>
       </div>
     );
