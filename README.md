@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# Math-Magicians
+# BookStore
 
 This repository contains an web app for a books list to help you adding list of books and checking their progress so far.
 
