@@ -5,7 +5,7 @@ import booksReducer from './books/books';
 // Establish the root reducer
 const rootReducer = combineReducers({
   booksReducer,
-  statusReducer
+  statusReducer,
 });
 
 // Set up the store

@@ -8,19 +8,19 @@ const addBook = (book) => ({
   type: ADD_BOOK,
   title: book.title,
   author: book.author,
-  id: book.id
+  id: book.id,
 });
 
 const removeBook = (book) => ({
   type: REMOVE_BOOK,
-  id: book.id
+  id: book.id,
 });
 
 const updateBook = (book) => ({
   type: UPDATE_BOOK,
   title: book.title,
   author: book.author,
-  id: book.id
+  id: book.id,
 });
 
 // Reducer for books
@@ -45,7 +45,7 @@ const booksReducer = (state = [], action) => {
             id: action.id,
           }];
         }
-        return book;
+        return state;
       });
 
     case REMOVE_BOOK:
@@ -53,7 +53,7 @@ const booksReducer = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 export { addBook, removeBook, updateBook };
 export default booksReducer;

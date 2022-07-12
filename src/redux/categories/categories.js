@@ -11,11 +11,11 @@ const statusReducer = (state = [], action) => {
   switch (action.type) {
     case CHECKING_STATUS:
       return 'Under Construction';
-    
+
     default:
       return state;
   }
-}
+};
 
 export { checkingStatus };
 export default statusReducer;
