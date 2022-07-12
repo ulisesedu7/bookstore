@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# Math-Magicians
+# BookStore
 
-This repository contains an web app for a books list to help you adding list of books and checking their progress so far.
+> This repository contains an web app for a books list to help you adding list of books and checking their progress so far.
 
 ## Built With
 
@@ -12,17 +12,22 @@ This repository contains an web app for a books list to help you adding list of 
 - Git & Github
 
 ## Live Demo -- Not Yet
-- Check the live demo of my page [here]()
+```
+Check the live demo of my page [here]()
+```
 
-## Getting Started
+## Setup
 
-To get a local copy up and running follow these simple example steps.
+Follow these steps on your console to properly clone this repository on your desktop:
 
-### Prerequisites
-
-Modern web browser with Javascript enabled
-
-Run: `Git Clone + 'URL of project'`
+```
+$ git clone 'repo_path'
+$ cd 'repo_name'
+$ code . 
+Run 'npm i' to install the dev dependencies.
+Run 'npm start' to run the website from your local machine.
+Run 'npm run build' to build the code after editing it.
+```
 
 ## Author
 
