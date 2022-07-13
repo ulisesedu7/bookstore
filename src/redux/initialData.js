@@ -5,19 +5,16 @@ const initialData = {
     {
       title: 'The Lion, the Witch and the Wardrobe',
       author: 'C. S. Lewis',
-      genre: 'Fantasy',
       id: v4(),
     },
     {
       title: 'La Sombra del Viento',
       author: 'Carlos Ruiz Zafón',
-      genre: 'Novel',
       id: v4(),
     },
     {
       title: 'Cien Años de Soledad',
       author: 'Gabriel García Márquez',
-      genre: 'Novel',
       id: v4(),
     },
   ],
