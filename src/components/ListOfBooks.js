@@ -7,12 +7,12 @@ class ListOfBooks extends React.PureComponent {
       {
         title: 'Book 1',
         author: 'Author 1',
-        id: '1',
+        id: 1,
       },
       {
         title: 'Book 2',
         author: 'Author 2',
-        id: '2',
+        id: 2,
       },
     ];
 
@@ -20,7 +20,7 @@ class ListOfBooks extends React.PureComponent {
       <div className="book-list-container">
         <h2>Books</h2>
         {books.map((book) => (
-          <Book book={book} key={book.id} />
+          <Book title={book.title} author={book.author} key={book.id} />
         ))}
       </div>
     );
