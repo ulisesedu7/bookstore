@@ -1,4 +1,4 @@
-import { v4 as uuidv4, v4 } from "uuid";
+import { v4 } from 'uuid';
 
 const initialData = {
   books: [
@@ -19,9 +19,9 @@ const initialData = {
       author: 'Gabriel García Márquez',
       genre: 'Novel',
       id: v4(),
-    }
+    },
   ],
   categories: [],
-}
+};
 
 export default initialData;
