@@ -2,7 +2,7 @@ import React from 'react';
 import AddNewBook from '../components/AddNewBook';
 import ListOfBooks from '../components/ListOfBooks';
 
-class Books extends React.PureComponent {
+class BooksPage extends React.PureComponent {
   render() {
     return (
       <div className="main-container">
@@ -13,4 +13,4 @@ class Books extends React.PureComponent {
   }
 }
 
-export default Books;
+export default BooksPage;
