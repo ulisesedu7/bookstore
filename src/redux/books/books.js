@@ -2,6 +2,7 @@
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const UPDATE_BOOK = 'bookstore/books/UPDATE_BOOK';
+const BOOKS_FETCHED = 'boookstore/books/BOOKS_FETCHED';
 
 // Create functions to add, remove and update
 const addBook = (book) => ({
@@ -23,6 +24,11 @@ const updateBook = (book) => ({
   title: book.title,
   author: book.author,
   id: book.id,
+});
+
+const fetchBook = (getBooks) => ({
+  type: BOOKS_FETCHED,
+  books: getBooks,
 });
 
 // Reducer for books
@@ -52,10 +58,14 @@ const booksReducer = (state = [], action = {}) => {
 
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.id);
-    default:
+    
+    case BOOKS_FETCHED:
+      return action.books;
+
+      default:
       return state;
   }
 };
 
-export { addBook, removeBook, updateBook };
+export { addBook, removeBook, updateBook, fetchBook };
 export default booksReducer;

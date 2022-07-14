@@ -2,7 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import statusReducer from './categories/categories';
 import booksReducer from './books/books';
-import initialData from './initialData';
+
+// New Initial Data
+const preloadedState = {
+  books: [],
+  categories: [],
+};
 
 // Establish the root reducer
 const rootReducer = combineReducers({
@@ -13,7 +18,7 @@ const rootReducer = combineReducers({
 // Set up the store
 const store = configureStore({
   reducer: rootReducer,
-  preloadedState: initialData,
+  preloadedState,
 });
 
 export default store;
