@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import statusReducer from './categories/categories';
 import booksReducer from './books/books';
+import { asyncGetState } from './books/booksAPIs';
 
 // New Initial Data
 const preloadedState = {
@@ -20,5 +21,7 @@ const store = configureStore({
   reducer: rootReducer,
   preloadedState,
 });
+
+store.dispatch(asyncGetState());
 
 export default store;
