@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { removeBook } from '../redux/books/books';
-import { removeBookFromAPI } from '../redux/api/apiActions';
+import { asyncRemoveBook } from '../redux/books/booksAPIs';
 
 const Book = (props) => {
   const { title, author, book } = props;
@@ -11,6 +11,7 @@ const Book = (props) => {
 
   const handleRemove = (book) => {
     dispatch(removeBook(book));
+    dispatch(asyncRemoveBook(book.item_id));
   };
 
   return (
@@ -20,7 +21,6 @@ const Book = (props) => {
       <button
         type="button"
         onClick={() => {
-          removeBookFromAPI(book.id);
           handleRemove(book);
         }}
       >

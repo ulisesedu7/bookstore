@@ -9,26 +9,21 @@ const addBook = (book) => ({
   type: ADD_BOOK,
   title: book.title,
   author: book.author,
-  id: book.id,
+  item_id: book.id,
 });
 
 const removeBook = (book) => ({
   type: REMOVE_BOOK,
   title: book.title,
   author: book.author,
-  id: book.id,
+  item_id: book.id,
 });
 
 const updateBook = (book) => ({
   type: UPDATE_BOOK,
   title: book.title,
   author: book.author,
-  id: book.id,
-});
-
-const fetchBook = (getBooks) => ({
-  type: BOOKS_FETCHED,
-  books: getBooks,
+  item_id: book.id,
 });
 
 // Reducer for books
@@ -40,32 +35,34 @@ const booksReducer = (state = [], action = {}) => {
         {
           title: action.title,
           author: action.author,
-          id: action.id,
+          item_id: action.item_id,
         },
       ];
 
     case UPDATE_BOOK:
       return state.map((id) => {
-        if (id === action.id) {
+        if (id === action.item_id) {
           return [{
             title: action.title,
             author: action.author,
-            id: action.id,
+            item_id: action.item_id,
           }];
         }
         return state;
       });
 
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.id);
-    
+      return state.filter((book) => book.item_id !== action.item_id);
+
     case BOOKS_FETCHED:
       return action.books;
 
-      default:
+    default:
       return state;
   }
 };
 
-export { addBook, removeBook, updateBook, fetchBook };
+export {
+  addBook, removeBook, updateBook,
+};
 export default booksReducer;
