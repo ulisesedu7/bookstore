@@ -9,21 +9,21 @@ const addBook = (book) => ({
   type: ADD_BOOK,
   title: book.title,
   author: book.author,
-  item_id: book.id,
+  item_id: book.item_id,
 });
 
 const removeBook = (book) => ({
   type: REMOVE_BOOK,
   title: book.title,
   author: book.author,
-  item_id: book.id,
+  item_id: book.item_id,
 });
 
 const updateBook = (book) => ({
   type: UPDATE_BOOK,
   title: book.title,
   author: book.author,
-  item_id: book.id,
+  item_id: book.item_id,
 });
 
 const fetchBooks = (getBooks) => ({

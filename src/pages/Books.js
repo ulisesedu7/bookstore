@@ -6,7 +6,7 @@ class BooksPage extends React.PureComponent {
   render() {
     return (
       <div className="main-container">
-        <ListOfBooks />
+        <ListOfBooks key={1} />
         <AddNewBook />
       </div>
     );
