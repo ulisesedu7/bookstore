@@ -26,6 +26,11 @@ const updateBook = (book) => ({
   item_id: book.id,
 });
 
+const fetchBooks = (getBooks) => ({
+  type: BOOKS_FETCHED,
+  books: getBooks,
+});
+
 // Reducer for books
 const booksReducer = (state = [], action = {}) => {
   switch (action.type) {
@@ -63,6 +68,6 @@ const booksReducer = (state = [], action = {}) => {
 };
 
 export {
-  addBook, removeBook, updateBook,
+  addBook, removeBook, updateBook, fetchBooks,
 };
 export default booksReducer;

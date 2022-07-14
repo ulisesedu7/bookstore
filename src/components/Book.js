@@ -36,7 +36,7 @@ Book.propTypes = {
   book: PropTypes.shape({
     title: PropTypes.string,
     author: PropTypes.string,
-    id: PropTypes.string,
+    item_id: PropTypes.string,
   }).isRequired,
 };
 

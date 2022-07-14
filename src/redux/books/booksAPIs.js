@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getBooksFromAPI, addBookToAPI, removeBookFromAPI } from '../api/apiActions';
+import { addBookToAPI, removeBookFromAPI } from '../api/apiActions';
 
-const BOOKS_FETCHED = 'bookstore/books/BOOKS_FETCHED';
 const ASYNC_ADD = 'bookstore/books/ASYNC_ADD';
 const ASYNC_REMOVE = 'bookstore/books/ASYNC_REMOVE';
 
@@ -21,12 +20,4 @@ const asyncRemoveBook = createAsyncThunk(
   },
 );
 
-const asyncGetState = createAsyncThunk(
-  BOOKS_FETCHED,
-  async () => {
-    const response = await getBooksFromAPI();
-    return response.books;
-  },
-);
-
-export { asyncAddBook, asyncRemoveBook, asyncGetState };
+export { asyncAddBook, asyncRemoveBook };
