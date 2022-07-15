@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux/es/hooks/useDispatch';
 import { asyncRemoveBook } from '../redux/books/booksAPIs';
+import ProgressCircle from './Progress-C';
+import UpdateProgress from './UpdateProgress';
 
 const Book = (props) => {
   const {
     title, author, book,
   } = props;
+  console.log(book);
   const dispatch = useDispatch();
 
   const handleRemove = (book) => {
@@ -14,18 +17,34 @@ const Book = (props) => {
   };
 
   return (
-    <div className="book-container">
-      <h3>{title}</h3>
-      <p>{author}</p>
-      <button
-        type="button"
-        onClick={() => {
-          handleRemove(book);
-        }}
-      >
-        Remove
-      </button>
-    </div>
+    <section className="book-card">
+      <div className="book-container">
+        <p>Category</p>
+        <h3>{title}</h3>
+        <p>{author}</p>
+
+        <div className="btns-container">
+          <button type="button">Comments</button>
+          <div className="btn-division" />
+          <button
+            type="button"
+            onClick={() => {
+              handleRemove(book);
+            }}
+          >
+            Remove
+          </button>
+          <div className="btn-division" />
+          <button type="button">Edit</button>
+        </div>
+      </div>
+
+      <div className="progress-container">
+        <ProgressCircle />
+        <div className="btn-division" />
+        <UpdateProgress />
+      </div>
+    </section>
   );
 };
 

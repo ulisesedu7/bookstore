@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegUserCircle } from 'react-icons/fa';
+import { FaRegUser } from 'react-icons/fa';
 
 class NavBar extends React.PureComponent {
   render() {
@@ -18,7 +18,7 @@ class NavBar extends React.PureComponent {
             </li>
 
             <li className="icon-holder">
-              <FaRegUserCircle className="nav-icon" />
+              <FaRegUser className="nav-icon" />
             </li>
           </ul>
         </nav>
