@@ -4,6 +4,7 @@ import Book from './Book';
 
 const ListOfBooks = () => {
   const books = useSelector((state) => state.books);
+  // console.log(books);
 
   return (
     <div className="book-list-container">

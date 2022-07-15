@@ -8,7 +8,7 @@ const getBooksFromAPI = () => async (dispatch) => {
   const response = await data.json();
   Object.keys(response).map((key) => {
     const book = response[key][0];
-    book.id = key;
+    book.item_id = key;
     book.key = key;
     books.push(book);
     return null;

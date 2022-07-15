@@ -22,9 +22,9 @@ const AddNewBook = () => {
 
     if (state.title && state.author) {
       const newBook = {
+        item_id: nanoid(),
         title: state.title,
         author: state.author,
-        item_id: nanoid(),
       };
 
       dispatch(asyncAddBook(newBook));

@@ -17,7 +17,7 @@ const asyncAddBook = createAsyncThunk(
 const asyncRemoveBook = createAsyncThunk(
   ASYNC_REMOVE,
   (book, { dispatch }) => {
-    const response = removeBookFromAPI(book.id);
+    const response = removeBookFromAPI(book.item_id);
     dispatch(removeBook(book));
     return response;
   },

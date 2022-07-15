@@ -7,7 +7,6 @@ const Book = (props) => {
   const {
     title, author, book,
   } = props;
-
   const dispatch = useDispatch();
 
   const handleRemove = (book) => {
@@ -37,7 +36,6 @@ Book.propTypes = {
     title: PropTypes.string,
     author: PropTypes.string,
     item_id: PropTypes.string,
-    id: PropTypes.string,
   }).isRequired,
 };
 
