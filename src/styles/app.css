@@ -75,6 +75,25 @@ Main Container Styles
 }
 
 /*
+Book Card Styles
+*/
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 2.313rem;
+  padding: 2rem 1.688rem;
+}
+
+.btns-container {
+  display: flex;
+}
+
+.progress-container {
+  display: flex;
+}
+
+/*
 Form Styles
 */
 .hr-division {

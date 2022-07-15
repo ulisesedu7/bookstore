@@ -9,7 +9,8 @@ const Book = (props) => {
   const {
     title, author, book,
   } = props;
-  console.log(book);
+  const { category } = book;
+
   const dispatch = useDispatch();
 
   const handleRemove = (book) => {
@@ -19,7 +20,7 @@ const Book = (props) => {
   return (
     <section className="book-card">
       <div className="book-container">
-        <p>Category</p>
+        <p>{category}</p>
         <h3>{title}</h3>
         <p>{author}</p>
 
@@ -55,6 +56,7 @@ Book.propTypes = {
     title: PropTypes.string,
     author: PropTypes.string,
     item_id: PropTypes.string,
+    category: PropTypes.string,
   }).isRequired,
 };
 
