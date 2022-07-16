@@ -124,16 +124,23 @@ Book Card Styles
   cursor: pointer;
 }
 
+.progress-info button {
+  background-color: #0290ff;
+  opacity: 1;
+  color: #fff;
+  letter-spacing: 0.5px;
+  padding: 0.515rem 1.4rem;
+  border-radius: 3px;
+  border: none;
+  margin-top: 1.438rem;
+}
+
 .btns-container button:hover {
   color: #274c6d;
 }
 
 .btns-container button:active {
   color: #1f3b53;
-}
-
-.progress-container {
-  display: flex;
 }
 
 .btn-division {
@@ -187,7 +194,7 @@ Progress Circle Styles
 }
 
 .progress-info > * {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, Arial, Helvetica, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
@@ -200,17 +207,6 @@ Progress Circle Styles
   opacity: 1;
   font-size: 1.2rem;
   letter-spacing: -0.4px;
-}
-
-.progress-info button {
-  background-color: #0290ff;
-  opacity: 1;
-  color: #fff;
-  letter-spacing: 0.5px;
-  padding: 0.515rem 1.4rem;
-  border-radius: 3px;
-  border: none;
-  margin-top: 1.438rem;
 }
 
 /*
@@ -226,7 +222,7 @@ Form Styles
 #form-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #888888;
+  color: #888;
   margin: 1.813rem 32.75rem 1.188rem 0;
 }
 
