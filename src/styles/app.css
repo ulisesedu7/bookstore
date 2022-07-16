@@ -8,6 +8,7 @@
 Navbar Styles
 */
 .header-container {
+  display: flex;
   background-color: #fff;
   padding: 1.813rem 6.25rem;
   border-bottom: solid 1px #e8e8e8;
@@ -18,6 +19,7 @@ Navbar Styles
   justify-content: flex-start;
   align-items: center;
   column-gap: 2.938rem;
+  width: 100%;
 }
 
 .main-navbar h1 {
@@ -29,6 +31,7 @@ Navbar Styles
 .nav-links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   list-style: none;
   column-gap: 2.563rem;
   font-size: 0.813rem;
@@ -256,4 +259,12 @@ Form Styles
   padding: 0.886rem 2.772rem;
   border-radius: 3px;
   background-color: #0290ff;
+}
+
+#main-form button:hover {
+  background-color: #5281aa;
+}
+
+#main-form button:active {
+  background-color: #395874;
 }

@@ -16,12 +16,11 @@ class NavBar extends React.PureComponent {
             <li>
               <Link to="/categories" className="nav-link-a">CATEGORIES</Link>
             </li>
-
-            <li className="icon-holder">
-              <FaRegUser className="nav-icon" />
-            </li>
           </ul>
         </nav>
+        <div className="icon-holder">
+          <FaRegUser className="nav-icon" />
+        </div>
       </header>
     );
   }
