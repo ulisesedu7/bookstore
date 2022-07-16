@@ -20,9 +20,9 @@ const Book = (props) => {
   return (
     <section className="book-card">
       <div className="book-container">
-        <p>{category}</p>
-        <h3>{title}</h3>
-        <p>{author}</p>
+        <p id="book-category">{category}</p>
+        <h3 id="book-title">{title}</h3>
+        <p id="book-author">{author}</p>
 
         <div className="btns-container">
           <button type="button">Comments</button>
@@ -42,7 +42,7 @@ const Book = (props) => {
 
       <div className="progress-container">
         <ProgressCircle />
-        <div className="btn-division" />
+        <div className="progress-division" />
         <UpdateProgress />
       </div>
     </section>
