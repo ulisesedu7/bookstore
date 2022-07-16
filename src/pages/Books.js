@@ -7,6 +7,9 @@ class BooksPage extends React.PureComponent {
     return (
       <div className="main-container">
         <ListOfBooks />
+
+        <div className="hr-division" />
+
         <AddNewBook />
       </div>
     );

@@ -40,7 +40,7 @@ const AddNewBook = () => {
 
   return (
     <div className="add-book-container">
-      <h2>ADD NEW BOOK</h2>
+      <h2 id="form-title">ADD NEW BOOK</h2>
       <form id="main-form">
         <input name="title" type="text" placeholder="Book Title" onChange={changeTitle} value={state.title || ''} />
         <input name="author" type="text" placeholder="Author" onChange={changeAuthor} value={state.author || ''} />
